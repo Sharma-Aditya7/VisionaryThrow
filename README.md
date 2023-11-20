@@ -14,7 +14,7 @@ VisionaryThrow: CV and ML Powered Rock Paper Scissors
 ### 2. ABHEESHTA V ARADHYA
    - **SRN:** PES1202302173
    - *Role:* 
-   - *Bio:* Anonymous
+   - *Bio:* Existence unconfirmed
 
 ### 3. AADHYANTHA RAJARAMAN
    - **SRN:** PES1202301991
