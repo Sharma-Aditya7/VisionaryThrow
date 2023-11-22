@@ -13,7 +13,7 @@ VisionaryThrow: CV and ML Powered Rock Paper Scissors
     Data Collection  -Preprocessing\
     Algorithm Development\
     Gesture Recognition\
-    Real-time Detection\
+    Real-time Detection
    - *Bio:* Idk
 
 ### 2. ABHEESHTA V ARADHYA
@@ -21,23 +21,23 @@ VisionaryThrow: CV and ML Powered Rock Paper Scissors
    - *Role:*\
      Graphical User Interface\
      Sound and Visual Effects\
-     Gesture Recognition\
-   - *Bio:* Existence Confirmed\
+     Gesture Recognition
+   - *Bio:* Existence Confirmed
 
 ### 3. AADHYANTHA RAJARAMAN
    - **SRN:** PES1202301991
    - *Role:*\
      Game Logic\
      Difficulty Levels\
-     Real-time Detection\
-   - *Bio:* Chill guy. Chem lab partner.\
+     Real-time Detection
+   - *Bio:* Chill guy. Chem lab partner.
 
 ### 4. Abhay Dhruv S
    - **SRN:** PES1202302571
    - *Role:*\
      Statistics and Analytics\
      User Feedback\
-     Game Logic\
+     Game Logic
    - *Bio:* Known, probably sleeping in class
 
 ---
