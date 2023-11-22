@@ -42,5 +42,5 @@ VisionaryThrow: CV and ML Powered Rock Paper Scissors
 
 ---
 
-**ImpNOTE: Don't forget to clear bio fields!!
+**ImpNOTE: Don't forget to clear bio fields!!\
 *I forgot anyways
