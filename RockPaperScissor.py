@@ -1,6 +1,8 @@
 import cv2
 import cvzone
 from cvzone.HandTrackingModule import HandDetector
+import random
+import time
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
@@ -15,7 +17,7 @@ detector = HandDetector(maxHands=1)
 timer = 0
 stateResult = False
 startGame = False
-#scores = [0, 0]
+scores = [0, 0]
 
 while True:
     imgBG = cv2.imread('Resources/BG.png')
@@ -48,16 +50,41 @@ while True:
                     if fingers == [0, 1, 1, 0, 0]:
                             playerMove = 3                  #Scissor
 
+                    randomNumber = random.randint(1,3)
+                    imgAI = cv2.imread(f'Resources/{randomNumber}.png', cv2.IMREAD_UNCHANGED)
+                    imgBG = cvzone.overlayPNG(imgBG, imgAI, (149, 310))
+
+#   ====================================================================================================
+#               Game Logic
+#   ====================================================================================================
+
+                    # Player Wins
+                    if (playerMove == 1 and randomNumber == 3) or \
+                            (playerMove == 2 and randomNumber == 1) or \
+                            (playerMove == 3 and randomNumber == 2):
+                        scores[1] += 1
+
+                    # AI Wins
+                    if (playerMove == 3 and randomNumber == 1) or \
+                            (playerMove == 1 and randomNumber == 2) or \
+                            (playerMove == 2 and randomNumber == 3):
+                        scores[0] += 1
+
     imgBG[234:654, 795:1195] = imgScaled
 
-    cv2.imshow("Image", img)
+    if stateResult:
+        imgBG = cvzone.overlayPNG(imgBG, imgAI, (i49, 310))
+
+    cv2.putText(imgBG, str(scores[0]), (410, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
+    cv2.putText(imgBG, str(scores[1]), (1112, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
+
     cv2.imshow("BG", imgBG)
-    cv2.imshow("Scaled", imgScaled)
 
     key = cv2.waitKey(1)
-    if key == ord('s')
+    if key == ord('s'):
         startGame = True
         stateResult = False
+        initialTime = time.time()
 
 #   ====================================================================================================
 #   Resource folder required here onwards
