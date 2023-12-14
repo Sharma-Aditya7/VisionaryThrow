@@ -79,3 +79,4 @@ while True:
         startGame = True
         initialTime = time.time()
         stateResult = False
+
