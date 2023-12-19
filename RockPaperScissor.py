@@ -44,11 +44,11 @@ while True:
                     hand = hands[0]
                     fingers = detector.fingersUp(hand)
                     if fingers == [0, 0, 0, 0, 0]:
-                        playerMove = 1                      #Rock
+                        playerMove = 1                  #Rock
                     if fingers == [1, 1, 1, 1, 1]:
-                            playerMove = 2                  #Paper
+                        playerMove = 2                  #Paper
                     if fingers == [0, 1, 1, 0, 0]:
-                            playerMove = 3                  #Scissor
+                        playerMove = 3                  #Scissor
 
                     randomNumber = random.randint(1,3)
                     imgAI = cv2.imread(f'Resources/{randomNumber}.png', cv2.IMREAD_UNCHANGED)
@@ -73,7 +73,7 @@ while True:
     imgBG[234:654, 795:1195] = imgScaled
 
     if stateResult:
-        imgBG = cvzone.overlayPNG(imgBG, imgAI, (i49, 310))
+        imgBG = cvzone.overlayPNG(imgBG, imgAI, (149, 310))
 
     cv2.putText(imgBG, str(scores[0]), (410, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
     cv2.putText(imgBG, str(scores[1]), (1112, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
@@ -85,12 +85,6 @@ while True:
         startGame = True
         stateResult = False
         initialTime = time.time()
-
-#   ====================================================================================================
-#   Resource folder required here onwards
-#   Don't have the actual png files rn, will use something else and then replace it later
-#   Files were originally extracted from the sc of Ritul's Figma file
-#   ====================================================================================================
 
 
 '''
@@ -127,6 +121,5 @@ def main_menu():
 
 # Example usage
 main_menu()
-
 '''
 
